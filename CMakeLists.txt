@@ -13,6 +13,11 @@ add_library(armadillo_library using_armadillo.cpp)
 add_executable(armadillo_gtest main.cpp)
 target_link_libraries(armadillo_gtest armadillo_library)
 
+# THE CODE BELOW TO LOAD GTEST IS FROM:
+# "CMake Cookbook - Building, testing and packaging modular software with modern CMake"
+# by Radovan Bast and Roberto Di Remigio
+# Packt Publishing Ltd 2018
+
 # we will use the network to fetch Google Test sources
 # make it possible to disable unit tests when not on network
 option(ENABLE_UNIT_TESTS "Enable unit tests" ON)
